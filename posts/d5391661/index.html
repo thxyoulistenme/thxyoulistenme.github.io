@@ -10,21 +10,21 @@
 <title>2020年2月19日记事 - windwest</title>
 
 
-    <meta name="description" content="工作 刷日语 读程序员的三门课">
+    <meta name="description" content="日常 工作 刷日语">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2020年2月19日记事">
 <meta property="og:url" content="http://windwest.cn/posts/d5391661/index.html">
 <meta property="og:site_name" content="windwest">
-<meta property="og:description" content="工作 刷日语 读程序员的三门课">
+<meta property="og:description" content="日常 工作 刷日语">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://windwest.cn/images/og_image.png">
+<meta property="og:image" content="http://windwest.cn/resources/yiduqinru.jpg">
 <meta property="article:published_time" content="2020-02-19T05:16:00.000Z">
-<meta property="article:modified_time" content="2020-02-19T06:38:48.890Z">
+<meta property="article:modified_time" content="2020-02-19T14:11:21.438Z">
 <meta property="article:author" content="windwest">
 <meta property="article:tag" content="日记">
 <meta property="article:tag" content="2020年2月">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://windwest.cn/images/og_image.png">
+<meta name="twitter:image" content="http://windwest.cn/resources/yiduqinru.jpg">
 
 
 
@@ -105,13 +105,14 @@
                 <a class="navbar-item"
                 href="/about">关于我</a>
                 
-                <a class="navbar-item"
-                href="/bangumis">追番列表</a>
-                
             </div>
             
             <div class="navbar-end">
                 
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
                 
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
@@ -129,6 +130,12 @@
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月19日记事">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -139,6 +146,12 @@
                 <a class="has-link-grey -link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
                 </div>
                 
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 560 个字)
+                </span>
                 
                 
                 <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
@@ -155,19 +168,24 @@
             
         </h1>
         <div class="content">
-            <ul>
+            <h2 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h2><ul>
 <li>工作</li>
 <li>刷日语</li>
-<li>读程序员的三门课</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>昨日四川遗留的现场问题解决,以及广东政务平台的功能开发</p>
-<h2 id="现场问题"><a href="#现场问题" class="headerlink" title="现场问题"></a>现场问题</h2><h3 id="10006取消退订流程缓存数据没有清理"><a href="#10006取消退订流程缓存数据没有清理" class="headerlink" title="10006取消退订流程缓存数据没有清理"></a>10006取消退订流程缓存数据没有清理</h3><p>昨日初步确定是由于省份控制没有生效导致没有走到四川清理缓存逻辑.今天加了日志后发现确实没有走到.通过本地debug后发现,省份的配置配在配置文件里是行不通的,取配置在加载配置之前.所以配置得配置在启动脚本里.后面让现场把省份配置到启动脚本后,问题解决.  </p>
+<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>昨日四川遗留的现场问题解决,以及广东政务平台的功能开发</p>
+<h3 id="现场问题"><a href="#现场问题" class="headerlink" title="现场问题"></a>现场问题</h3><h4 id="10006取消退订流程缓存数据没有清理"><a href="#10006取消退订流程缓存数据没有清理" class="headerlink" title="10006取消退订流程缓存数据没有清理"></a>10006取消退订流程缓存数据没有清理</h4><p>昨日初步确定是由于省份控制没有生效导致没有走到四川清理缓存逻辑.今天加了日志后发现确实没有走到.通过本地debug后发现,省份的配置配在配置文件里是行不通的,取配置在加载配置之前.所以配置得配置在启动脚本里.后面让现场把省份配置到启动脚本后,问题解决.  </p>
 <p><img src="/images/1582090580478.png" alt="image"><br><img src="/images/1582090600519.png" alt="image">  </p>
 <p>此处需要的牢记的一点是,后期省份控制需要加在启动脚本里!</p>
-<h2 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h2><h3 id="smgp协议测试"><a href="#smgp协议测试" class="headerlink" title="smgp协议测试"></a>smgp协议测试</h3><p>使用的开源框架作者说对smgp不熟悉,所以初步估计协议的实现有点问题,这个协议需要自己去实现了<br>待做</p>
-<h3 id="轨迹表以及纪录表模型确定"><a href="#轨迹表以及纪录表模型确定" class="headerlink" title="轨迹表以及纪录表模型确定"></a>轨迹表以及纪录表模型确定</h3><p>待做</p>
+<h3 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h3><h4 id="smgp协议测试"><a href="#smgp协议测试" class="headerlink" title="smgp协议测试"></a>smgp协议测试</h4><p>测试环境使用的网关在ie下,打开开发者工具&gt;仿真&gt;浏览器配置文件,选择<strong>企业</strong>就可以访问了.不过那个页面真是亮瞎了我的眼..<br>使用的开源框架作者说对smgp不熟悉,所以初步估计协议的实现有点问题,这个协议需要自己去实现了</p>
+<h4 id="轨迹表以及纪录表模型确定"><a href="#轨迹表以及纪录表模型确定" class="headerlink" title="轨迹表以及纪录表模型确定"></a>轨迹表以及纪录表模型确定</h4><p>将模型与思路确定了.待明天讨论</p>
+<h2 id="刷日语"><a href="#刷日语" class="headerlink" title="刷日语"></a>刷日语</h2><h3 id="语法1-てくれませんか-てもらえませんか"><a href="#语法1-てくれませんか-てもらえませんか" class="headerlink" title="语法1 てくれませんか/てもらえませんか　"></a>语法1 てくれませんか/てもらえませんか　</h3><p>结构: 动词て形+くれませんか/もらえませんか<br>意思: 能否帮我做..?<br>说明: 用于委婉请求别人为自己做某事<br>例句:　　<br>辞書を貸してもらえませんか　　<br>じしょをかしてもらえませんか　　<br>能借我词典吗?</p>
+<h3 id="语法2"><a href="#语法2" class="headerlink" title="语法2"></a>语法2</h3><p>结构: 动词て形+あげる<br>意思: 甲给乙做<br>说明: 表示给予别人恩惠,这个恩惠可以是一个动作<br>例句:<br>浅野くんは結衣ちゃんに昼ご飯をごちそうをしてあげた　　<br>あさのくんはけつころもにひるごはんをごちそうをしてあげた　　<br>浅野请结衣吃了午饭</p>
+<h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul>
+<li>完成smgp协议的对接</li>
+<li>完成所有todo的sql</li>
+</ul>
 
         </div>
         
@@ -344,6 +362,62 @@
 </div>
     
         
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    目录
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#日常">
+        <span class="has-mr-6">1</span>
+        <span>日常</span>
+        </a></li><li>
+        <a class="is-flex" href="#工作">
+        <span class="has-mr-6">2</span>
+        <span>工作</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#现场问题">
+        <span class="has-mr-6">2.1</span>
+        <span>现场问题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#10006取消退订流程缓存数据没有清理">
+        <span class="has-mr-6">2.1.1</span>
+        <span>10006取消退订流程缓存数据没有清理</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#广东政务平台">
+        <span class="has-mr-6">2.2</span>
+        <span>广东政务平台</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#smgp协议测试">
+        <span class="has-mr-6">2.2.1</span>
+        <span>smgp协议测试</span>
+        </a></li><li>
+        <a class="is-flex" href="#轨迹表以及纪录表模型确定">
+        <span class="has-mr-6">2.2.2</span>
+        <span>轨迹表以及纪录表模型确定</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#刷日语">
+        <span class="has-mr-6">3</span>
+        <span>刷日语</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#语法1-てくれませんか-てもらえませんか">
+        <span class="has-mr-6">3.1</span>
+        <span>语法1 てくれませんか/てもらえませんか　</span>
+        </a></li><li>
+        <a class="is-flex" href="#语法2">
+        <span class="has-mr-6">3.2</span>
+        <span>语法2</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#明日计划">
+        <span class="has-mr-6">4</span>
+        <span>明日计划</span>
+        </a></li></ul>
+            </div>
+        </div>
+    </div>
+
     
         <div class="card widget">
     <div class="card-content">
@@ -438,7 +512,7 @@
             
             <a href="/posts/d5391661/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2020年2月19日记事">
+                    <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月19日记事">
                 </p>
             </a>
             
@@ -625,7 +699,7 @@
             
             <a href="/posts/d5391661/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2020年2月19日记事">
+                    <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月19日记事">
                 </p>
             </a>
             
