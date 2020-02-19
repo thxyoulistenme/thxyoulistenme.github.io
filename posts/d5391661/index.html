@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://windwest.cn/resources/yiduqinru.jpg">
 <meta property="article:published_time" content="2020-02-19T05:16:00.000Z">
-<meta property="article:modified_time" content="2020-02-19T14:11:21.438Z">
+<meta property="article:modified_time" content="2020-02-19T14:16:24.744Z">
 <meta property="article:author" content="windwest">
 <meta property="article:tag" content="日记">
 <meta property="article:tag" content="2020年2月">
@@ -175,9 +175,8 @@
 <a id="more"></a>
 
 <h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>昨日四川遗留的现场问题解决,以及广东政务平台的功能开发</p>
-<h3 id="现场问题"><a href="#现场问题" class="headerlink" title="现场问题"></a>现场问题</h3><h4 id="10006取消退订流程缓存数据没有清理"><a href="#10006取消退订流程缓存数据没有清理" class="headerlink" title="10006取消退订流程缓存数据没有清理"></a>10006取消退订流程缓存数据没有清理</h4><p>昨日初步确定是由于省份控制没有生效导致没有走到四川清理缓存逻辑.今天加了日志后发现确实没有走到.通过本地debug后发现,省份的配置配在配置文件里是行不通的,取配置在加载配置之前.所以配置得配置在启动脚本里.后面让现场把省份配置到启动脚本后,问题解决.  </p>
+<h3 id="现场问题"><a href="#现场问题" class="headerlink" title="现场问题"></a>现场问题</h3><h4 id="10006取消退订流程缓存数据没有清理"><a href="#10006取消退订流程缓存数据没有清理" class="headerlink" title="10006取消退订流程缓存数据没有清理"></a>10006取消退订流程缓存数据没有清理</h4><p>昨日初步确定是由于省份控制没有生效导致没有走到四川清理缓存逻辑.今天加了日志后发现确实没有走到.通过本地debug后发现,省份的配置配在配置文件里是行不通的,取配置在加载配置之前.所以配置得配置在启动脚本里.后面让现场把省份配置到启动脚本后,问题解决.<br><strong>此处需要的牢记的一点是,后期省份控制需要加在启动脚本里!</strong></p>
 <p><img src="/images/1582090580478.png" alt="image"><br><img src="/images/1582090600519.png" alt="image">  </p>
-<p>此处需要的牢记的一点是,后期省份控制需要加在启动脚本里!</p>
 <h3 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h3><h4 id="smgp协议测试"><a href="#smgp协议测试" class="headerlink" title="smgp协议测试"></a>smgp协议测试</h4><p>测试环境使用的网关在ie下,打开开发者工具&gt;仿真&gt;浏览器配置文件,选择<strong>企业</strong>就可以访问了.不过那个页面真是亮瞎了我的眼..<br>使用的开源框架作者说对smgp不熟悉,所以初步估计协议的实现有点问题,这个协议需要自己去实现了</p>
 <h4 id="轨迹表以及纪录表模型确定"><a href="#轨迹表以及纪录表模型确定" class="headerlink" title="轨迹表以及纪录表模型确定"></a>轨迹表以及纪录表模型确定</h4><p>将模型与思路确定了.待明天讨论</p>
 <h2 id="刷日语"><a href="#刷日语" class="headerlink" title="刷日语"></a>刷日语</h2><h3 id="语法1-てくれませんか-てもらえませんか"><a href="#语法1-てくれませんか-てもらえませんか" class="headerlink" title="语法1 てくれませんか/てもらえませんか　"></a>语法1 てくれませんか/てもらえませんか　</h3><p>结构: 动词て形+くれませんか/もらえませんか<br>意思: 能否帮我做..?<br>说明: 用于委婉请求别人为自己做某事<br>例句:　　<br>辞書を貸してもらえませんか　　<br>じしょをかしてもらえませんか　　<br>能借我词典吗?</p>
