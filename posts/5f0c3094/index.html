@@ -7,22 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>2020年2月19日记事 - windwest</title>
+<title>2020年2月21日记事 - windwest</title>
 
 
-    <meta name="description" content="日常 工作 刷日语">
+    <meta name="description" content="工作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2020年2月19日记事">
-<meta property="og:url" content="http://windwest.cn/posts/d5391661/index.html">
+<meta property="og:title" content="2020年2月21日记事">
+<meta property="og:url" content="http://windwest.cn/posts/5f0c3094/index.html">
 <meta property="og:site_name" content="windwest">
-<meta property="og:description" content="日常 工作 刷日语">
+<meta property="og:description" content="工作">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://windwest.cn/resources/yiduqinru.jpg">
-<meta property="article:published_time" content="2020-02-19T13:16:00.000Z">
-<meta property="article:modified_time" content="2020-02-19T16:27:09.819Z">
+<meta property="article:published_time" content="2020-02-21T13:55:30.000Z">
+<meta property="article:modified_time" content="2020-02-21T14:14:07.623Z">
 <meta property="article:author" content="windwest">
-<meta property="article:tag" content="日记">
-<meta property="article:tag" content="2020年2月">
+<meta property="article:tag" content="blog java study">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://windwest.cn/resources/yiduqinru.jpg">
 
@@ -82,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="2020年2月19日记事" height="28">
+                <img src="/images/logo.svg" alt="2020年2月21日记事" height="28">
             
             </a>
         </div>
@@ -132,7 +131,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月19日记事">
+            <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月21日记事">
         </span>
     </div>
     
@@ -140,17 +139,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T13:16:00.000Z">2020-02-19</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2020-02-21T13:55:30.000Z">2020-02-21</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 565 个字)
+                    4 分钟 读完 (大约 529 个字)
                 </span>
                 
                 
@@ -164,37 +159,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                2020年2月19日记事
+                2020年2月21日记事
             
         </h1>
         <div class="content">
-            <h2 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h2><ul>
+            <ul>
 <li>工作</li>
-<li>刷日语</li>
 </ul>
 <a id="more"></a>
 
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>昨日四川遗留的现场问题解决,以及广东政务平台的功能开发</p>
-<h3 id="现场问题"><a href="#现场问题" class="headerlink" title="现场问题"></a>现场问题</h3><h4 id="10006取消退订流程缓存数据没有清理"><a href="#10006取消退订流程缓存数据没有清理" class="headerlink" title="10006取消退订流程缓存数据没有清理"></a>10006取消退订流程缓存数据没有清理</h4><p>昨日初步确定是由于省份控制没有生效导致没有走到四川清理缓存逻辑.今天加了日志后发现确实没有走到.通过本地debug后发现,省份的配置配在配置文件里是行不通的,取配置在加载配置之前.所以配置得配置在启动脚本里.后面让现场把省份配置到启动脚本后,问题解决.<br><strong>此处需要的牢记的一点是,后期省份控制需要加在启动脚本里!</strong></p>
-<p><img src="/images/1582090580478.png" alt="image"><br><img src="/images/1582090600519.png" alt="image">  </p>
-<h3 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h3><h4 id="smgp协议测试"><a href="#smgp协议测试" class="headerlink" title="smgp协议测试"></a>smgp协议测试</h4><p>测试环境使用的网关在ie下,打开开发者工具&gt;仿真&gt;浏览器配置文件,选择<strong>企业</strong>就可以访问了.不过那个页面真是亮瞎了我的眼..<br>使用的开源框架作者说对smgp不熟悉,所以初步估计协议的实现有点问题,这个协议需要自己去实现了</p>
-<h4 id="轨迹表以及纪录表模型确定"><a href="#轨迹表以及纪录表模型确定" class="headerlink" title="轨迹表以及纪录表模型确定"></a>轨迹表以及纪录表模型确定</h4><p>将模型与思路确定了.待明天讨论</p>
-<h2 id="刷日语"><a href="#刷日语" class="headerlink" title="刷日语"></a>刷日语</h2><h3 id="语法1-てくれませんか-てもらえませんか"><a href="#语法1-てくれませんか-てもらえませんか" class="headerlink" title="语法1 てくれませんか/てもらえませんか　"></a>语法1 てくれませんか/てもらえませんか　</h3><p>结构: 动词て形+くれませんか/もらえませんか<br>意思: 能否帮我做..?<br>说明: 用于委婉请求别人为自己做某事<br>例句:　　<br>辞書を貸してもらえませんか　　<br>じしょをかしてもらえませんか　　<br>能借我词典吗?</p>
-<h3 id="语法2-て形-あげる"><a href="#语法2-て形-あげる" class="headerlink" title="语法2  て形+あげる"></a>语法2  て形+あげる</h3><p>结构: 动词て形+あげる<br>意思: 甲给乙做<br>说明: 表示给予别人恩惠,这个恩惠可以是一个动作<br>例句:<br>浅野くんは結衣ちゃんに昼ご飯をごちそうをしてあげた　　<br>あさのくんはけつころもにひるごはんをごちそうをしてあげた　　<br>浅野请结衣吃了午饭</p>
-<h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ul>
-<li>完成smgp协议的对接</li>
-<li>完成所有todo的sql</li>
-</ul>
+<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><h3 id="四川现场工作支撑"><a href="#四川现场工作支撑" class="headerlink" title="四川现场工作支撑"></a>四川现场工作支撑</h3><p>配合四川现场进行数据源抽取的测试工作.遇到了如下问题:  </p>
+<ol>
+<li>提示无效的sid<br> 通过百度得知,oracle8之前,jdbcurl都是以实例名进行连接,实例名就是sid,默认是ORCL,所以jdbcurl为<strong>jdbc:oracle:thin://ip:端口:ORCL</strong>.但是在8之后,有个serviceName的概念,类似于mysql的数据库.jdbcurl改为了<strong>jdbc:oracle:thin://ip:端口/serviceName</strong>.程序是通过kettle进行抽取的,通过跟踪kettle源码发现,在<strong>OracleDatabaseMeta.getURL</strong>进行jdbcUrl的生成.这个主要是判断提供的数据源xml文件里database标签是否以”/“开头.如果以”/“开头就是serviceName形式,否则sid形式.将数据源的database标签值加了个/后,可以正常连接.<br><img src="/images/pasted-4.png" alt="以斜杠开头直接拼接"><br><img src="/images/pasted-3.png" alt="数据源标签修改">  </li>
+<li>提示无效协议<br> 原因是一开始提供的oracle驱动是ojdbc14,只能用于oracle10以下的版本.而生产环境对接的数据源是oracle10和oracle11,将驱动换为oracle7.可以正常连接.<br><img src="/images/pasted-5.png" alt="oracle各版本对应关系">  </li>
+<li>提示表不存在<br> 这是之前同事实现的逻辑与现场实际使用有点出入.通过与现场沟通得知.需要在当月抽取上个月的serverId数据用于下个月使用.并且在群发实际使用过程使用的表也要关注一下有没有用错.周六搞定它.  </li>
+</ol>
+<h3 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h3><p>今天主要完成了号百短信的发送协议开发.后面还有好几个接口需要对接.</p>
+<h2 id="明日工作"><a href="#明日工作" class="headerlink" title="明日工作"></a>明日工作</h2><p>趁着周末以及下周复工,在周末的时候要把未确定的点以及没赶上进度的东西都得收尾了.  </p>
+<ol>
+<li>smgp使用老代码需要与新的数据模型进行对接.</li>
+<li>号百短信的协议可以按照文档先实现了.</li>
+<li>数据转移的时候,没有考虑建月份表.</li>
+<li>阈值监控告警短信.</li>
+<li>整理一下未确定的点.</li>
+</ol>
 
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/2020%E5%B9%B42%E6%9C%88/" rel="tag">2020年2月</a>, <a class="has-link-grey -link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a>
-                </div>
-            </div>
         </div>
         
         
@@ -242,17 +231,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/b0ce5baa/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">2020年2月20日记事</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/posts/3afb7d5f/">
-                <span class="level-item">2020年2月18日记事</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/b0ce5baa/">
+                <span class="level-item">2020年2月20日记事</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -376,49 +358,21 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#日常">
-        <span class="has-mr-6">1</span>
-        <span>日常</span>
-        </a></li><li>
         <a class="is-flex" href="#工作">
-        <span class="has-mr-6">2</span>
+        <span class="has-mr-6">1</span>
         <span>工作</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#现场问题">
-        <span class="has-mr-6">2.1</span>
-        <span>现场问题</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#10006取消退订流程缓存数据没有清理">
-        <span class="has-mr-6">2.1.1</span>
-        <span>10006取消退订流程缓存数据没有清理</span>
-        </a></li></ul></li><li>
+        <a class="is-flex" href="#四川现场工作支撑">
+        <span class="has-mr-6">1.1</span>
+        <span>四川现场工作支撑</span>
+        </a></li><li>
         <a class="is-flex" href="#广东政务平台">
-        <span class="has-mr-6">2.2</span>
+        <span class="has-mr-6">1.2</span>
         <span>广东政务平台</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#smgp协议测试">
-        <span class="has-mr-6">2.2.1</span>
-        <span>smgp协议测试</span>
-        </a></li><li>
-        <a class="is-flex" href="#轨迹表以及纪录表模型确定">
-        <span class="has-mr-6">2.2.2</span>
-        <span>轨迹表以及纪录表模型确定</span>
-        </a></li></ul></li></ul></li><li>
-        <a class="is-flex" href="#刷日语">
-        <span class="has-mr-6">3</span>
-        <span>刷日语</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#语法1-てくれませんか-てもらえませんか">
-        <span class="has-mr-6">3.1</span>
-        <span>语法1 てくれませんか/てもらえませんか　</span>
-        </a></li><li>
-        <a class="is-flex" href="#语法2-て形-あげる">
-        <span class="has-mr-6">3.2</span>
-        <span>语法2  て形+あげる</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#明日计划">
-        <span class="has-mr-6">4</span>
-        <span>明日计划</span>
+        <a class="is-flex" href="#明日工作">
+        <span class="has-mr-6">2</span>
+        <span>明日工作</span>
         </a></li></ul>
             </div>
         </div>
@@ -883,7 +837,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="2020年2月19日记事" height="28">
+                    <img src="/images/logo.svg" alt="2020年2月21日记事" height="28">
                 
                 </a>
                 <p class="is-size-7">
