@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>2020年2月22日记事 - windwest</title>
+<title>2020年2月29日记事 - windwest</title>
 
 
-    <meta name="description" content="工作 刷b站今天有点懈怠">
+    <meta name="description" content="工作最近一段时间感觉十分懈怠,上班的状态也不是很好.需要完成的任务都没有能及时完成,导致周末需要去补坑,使得没有时间去看书提升自己.这个需要好好反省一下.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2020年2月22日记事">
-<meta property="og:url" content="http://windwest.cn/posts/b43b8b97/index.html">
+<meta property="og:title" content="2020年2月29日记事">
+<meta property="og:url" content="http://windwest.cn/posts/4cdb7060/index.html">
 <meta property="og:site_name" content="windwest">
-<meta property="og:description" content="工作 刷b站今天有点懈怠">
+<meta property="og:description" content="工作最近一段时间感觉十分懈怠,上班的状态也不是很好.需要完成的任务都没有能及时完成,导致周末需要去补坑,使得没有时间去看书提升自己.这个需要好好反省一下.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://windwest.cn/resources/yiduqinru.jpg">
-<meta property="article:published_time" content="2020-02-22T13:43:10.000Z">
-<meta property="article:modified_time" content="2020-02-22T13:58:31.802Z">
+<meta property="article:published_time" content="2020-02-29T15:37:35.000Z">
+<meta property="article:modified_time" content="2020-02-29T16:01:54.292Z">
 <meta property="article:author" content="windwest">
 <meta property="article:tag" content="blog java study">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="2020年2月22日记事" height="28">
+                <img src="/images/logo.svg" alt="2020年2月29日记事" height="28">
             
             </a>
         </div>
@@ -131,7 +131,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月22日记事">
+            <img class="thumbnail" src="/resources/yiduqinru.jpg" alt="2020年2月29日记事">
         </span>
     </div>
     
@@ -139,13 +139,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-22T13:43:10.000Z">2020-02-22</time>
+                <time class="level-item has-text-grey" datetime="2020-02-29T15:37:35.000Z">2020-02-29</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 370 个字)
+                    7 分钟 读完 (大约 999 个字)
                 </span>
                 
                 
@@ -159,30 +159,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                2020年2月22日记事
+                2020年2月29日记事
             
         </h1>
         <div class="content">
             <ul>
-<li>工作</li>
-<li>刷b站<br>今天有点懈怠</li>
+<li>工作<br>最近一段时间感觉十分懈怠,上班的状态也不是很好.需要完成的任务都没有能及时完成,导致周末需要去补坑,使得没有时间去看书提升自己.这个需要好好反省一下.</li>
 </ul>
 <a id="more"></a>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><h3 id="广东政务平台"><a href="#广东政务平台" class="headerlink" title="广东政务平台"></a>广东政务平台</h3><p>基本完成昨日定的计划  </p>
+
+<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><h3 id="四川数据源抽取问题解决"><a href="#四川数据源抽取问题解决" class="headerlink" title="四川数据源抽取问题解决"></a>四川数据源抽取问题解决</h3><p>通过四川提供的日志可以看出,由于长时间没有进行操作,导致mysql的连接被close了.然后使用关闭的连接去执行语句,报错了.</p>
+<p><img src="/images/pasted-10.png" alt="upload successful"><br>长时间没有操作的原因是因为在用kettle转移数据的时候,直接先与源数据源和目标数据源建立了连接.然后去源数据源里获取数据,再往目标数据源里面插入.而源数据源的数据比较多,获取过程直接持续了3个小时.这期间建立的目标数据源连接没有做任何操作.虽然mysql的默认超时时间是8小时,但是让现场查了一下现场库配置的超时时间,是1小时.所以连接被关闭了.导致后续执行目标数据源的语句时报了上述错误.</p>
+<p><strong>解决</strong><br>通过debug kettle数据源获取连接的过程发现.kettle也是支持用连接池的,默认使用的是dbcp连接池.<br><img src="/images/pasted-11.png" alt="upload successful"><br>通过配置以上配置,即可使用连接池,并且配置了连接池维持连接的方式.让连接不会因为长时间不操作被关闭.</p>
+<h3 id="四川storm程序无法消费kafka"><a href="#四川storm程序无法消费kafka" class="headerlink" title="四川storm程序无法消费kafka"></a>四川storm程序无法消费kafka</h3><p>这个权限的问题记得之前遇到过一次,当时最后得出原因是因为kafka配置参数取到了默认的storm的kerberos认证参数.然后用storm的kerberos用户去认证kafka.当然是没权限了.可是后面因为这个错误,已经把kafka认证参数改为直接从kafka参数中获取了,而不是从环境变量里获取,按理说不会有这个问题了.<br><img src="/images/pasted-12.png" alt="upload successful"><br>然后让现场取日志后发现,是因为没有获取到kerberos文件内容,然后还是取了默认的storm的kerberos认证参数.<br><img src="/images/pasted-13.png" alt="upload successful"><br>让现场查看这个目录后发现该文件存在,并且权限也是755<br><img src="/images/pasted-14.png" alt="upload successful"><br>后让现场查看了上一级目录发现上级目录权限是700<br><img src="/images/pasted-15.png" alt="upload successful"><br>所以可以合理怀疑storm的worker进程启动用户并不是我们系统使用的用户,所以无法读取到我们系统用户目录下的认证文件.后来让现场将该目录权限改成777后,问题解决.后让现场执行了下jps命令,发现用户下没有任何java进程.所以可以得出结论<br><strong>使用平台storm提交java程序之后,storm分发到各个节点上后启动worker进程.在这个环节里,并不是使用我们系统用户去启动.然后我们系统用户目录权限是700,导致无法访问到系统用户目录下的kerberos认证文件.所以kafka默认还是从环境变量里获取kerberos认证参数.而环境变量配置的是storm自身的kerberos认证参数.使用这个认证去使用kafka的话,是没有分配任何权限的</strong>  </p>
+<h3 id="广东政务平台发送组件全流程测试"><a href="#广东政务平台发送组件全流程测试" class="headerlink" title="广东政务平台发送组件全流程测试"></a>广东政务平台发送组件全流程测试</h3><p>由于在家里,用kafka测试没那么方便,所以暂时只测试了加载表发送的流程.目前已经能贯通.从kafka消费发送估计大概率也没多大问题.但是还存在以下问题:</p>
 <ol>
-<li>插入数据前判断月表是否存在,不存在则新建.  </li>
-<li>失败率达到配置阈值时,发送告警短信.</li>
-<li>使用之前的smgp协议连接网关与发送信息成功.</li>
-<li>写了从表加载发送数据线程.</li>
-<li>按照号百的协议文档编写了定时拉取状态报告的线程</li>
-</ol>
-<p>迷惑的地方还有很多,需要后面慢慢理,主流程应该基本通了.</p>
-<p>收获:<br>jdk在1.6之后引入了jaxb.一个很好用的api,可以实现javabean与xml的互相转换.<br><img src="/images/pasted-7.png" alt="javabean使用注解标识"><br><img src="/images/pasted-8.png" alt="使用jaxb将javabean转成xml"><br><img src="/images/pasted-9.png" alt="使用jaxb将xml转成javabean">  </p>
-<h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><p>下周一正式上班,明天得回合肥了.如果到合肥有时间的话,还是得把smgp协议的东西整理一下.还有四川抽取活跃用户数据源的事.另外今天在b站刷到了半佛仙人大佬的视频,话语实在太有条理了.看他股市的那一集视频,结尾推荐了三本书,<em>小狗钱钱</em>,<em>经济学原理(宏观版本、微观版本)</em>,<em>海龟交易法则</em>,后面看一下.总结一下,需要做的如下:</p>
-<ol>
-<li>整理smgp协议实现</li>
-<li>梳理四川多数据源实现</li>
-<li>阅读<em>小狗钱钱</em></li>
+<li>提供公共方法,保存异常以及发送表纪录  </li>
+<li>搭建smgp和号百的网关模拟环境  </li>
+<li>任务、网关等状态需要确定一下</li>
+<li>完成下日志输出</li>
 </ol>
 
         </div>
@@ -232,17 +227,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/4cdb7060/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">2020年2月29日记事</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/posts/5f0c3094/">
-                <span class="level-item">2020年2月21日记事</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/b43b8b97/">
+                <span class="level-item">2020年2月22日记事</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -370,14 +358,18 @@
         <span class="has-mr-6">1</span>
         <span>工作</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#广东政务平台">
+        <a class="is-flex" href="#四川数据源抽取问题解决">
         <span class="has-mr-6">1.1</span>
-        <span>广东政务平台</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#明日计划">
-        <span class="has-mr-6">2</span>
-        <span>明日计划</span>
-        </a></li></ul>
+        <span>四川数据源抽取问题解决</span>
+        </a></li><li>
+        <a class="is-flex" href="#四川storm程序无法消费kafka">
+        <span class="has-mr-6">1.2</span>
+        <span>四川storm程序无法消费kafka</span>
+        </a></li><li>
+        <a class="is-flex" href="#广东政务平台发送组件全流程测试">
+        <span class="has-mr-6">1.3</span>
+        <span>广东政务平台发送组件全流程测试</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -841,7 +833,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="2020年2月22日记事" height="28">
+                    <img src="/images/logo.svg" alt="2020年2月29日记事" height="28">
                 
                 </a>
                 <p class="is-size-7">
